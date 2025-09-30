@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAG Chatbot</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+  <header>
+    📘 RAG Chatbot
+    <small>Ask questions from your uploaded notes</small>
+  </header>
+
+  <!-- Upload box -->
+  <div class="upload-box">
+    <p>Upload your PDF notes</p>
+    <input type="file" id="fileUpload">
+    <button id="upload-btn">Upload</button>
+    <p id="upload-status"></p>
+  </div>
+
+  <!-- Chat area -->
+  <div class="chat-container" id="chat"></div>
+
+  <!-- Input area -->
+  <div class="input-area">
+    <input type="text" id="question" placeholder="Type your question...">
+    <button id="ask-btn">➤</button>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

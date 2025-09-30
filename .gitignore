@@ -1,0 +1,19 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore virtual environment
+venv/
+.env/
+
+# Ignore dotenv file with secrets
+.env
+
+# Ignore node_modules (if you have frontend stuff)
+node_modules/
+
+# Ignore system files
+.DS_Store
+
+*.pdf
+
