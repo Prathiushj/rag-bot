@@ -64,16 +64,17 @@ async def ask(question: str = Form(...)):
     
     context = "\n\n".join(results["documents"][0])
     
-    prompt = f"""
-    Answer the question using ONLY the context below.
-    If the answer is not there, say: 'I could not find this in your notes.'
+   prompt = f"""
+You are a helpful assistant. Based on the context below, answer the question clearly and naturally.
+If the context contains the answer, use your own words to explain it. 
+If not, say 'I could not find this in your notes.'
 
-    Context:
-    {context}
+Context:
+{context}
 
-    Question: {question}
-    Answer:
-    """
+Question: {question}
+Answer:
+"""
     
     answer = client.chat.completions.create(
         model="gpt-3.5-turbo", 
